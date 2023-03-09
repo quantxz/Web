@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <main>
+        <img src="" alt="pokemon" class="pokemon_image">
+
+        <h1 class="poke_data">
+            <span class="pokemon_number"></span>-
+            <span class="pokemon_name" onclick="openModal()"></span>
+        </h1>
+
+        <form class="form">
+            <input type="search" 
+            class="input_search"
+            placeholder="name or number"
+            required
+            />
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">Prev &lt;</button>
+            <button class="button btn-next">Next &gt;</button>
+        </div>
+
+        <img src="https://i.ibb.co/Qdhs5j4/pokedex.png" alt="pokedex" class="pokedex">
+    </main>
+
+    <div class="bg">
+        <div class="modal">
+            <div class="close">
+                <h3>fechar</h3>
+                <img src="https://i.ibb.co/3C34K2v/211652-close-icon.png" alt="" 
+                onclick="closeModal()">
+            </div>
+
+            <div class="modal-pokemon">
+                <img src="" alt="pokemon" class="pokemon_image_modal">
+                <span class="pokemon_name_modal"></span>
+            </div>
+
+
+            <div class="desc">
+                <div class="tipagens">
+                    <h1>tipos:</h1>
+                    <h2 class="tipos"></h2> 
+                </div>
+
+            <div class="abilitys">
+                <h1>habilidades:</h1>
+                <h2 class="habilidades"> </h2> 
+            </div>
+
+            <div class="species">
+                <h1>especie:</h1>
+                <h2 class="especies"> </h2> 
+            </div>
+
+            </div>
+
+            <div class="items">
+                <h1>alguns movimentos:</h1>
+                <h2 class="moves"></h2> 
+            </div>
+
+            <span class="pokemon_number_modal"></span>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

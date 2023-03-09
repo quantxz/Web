@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    margin-top: 5%;
+    padding: 15px;
+    position: relative;
+    z-index: 0;
+}
+
+.pokedex{
+    height: 80vh;
+    width: 100%;
+
+    max-width: 450px;
+}
+
+.pokemon_image{
+    position: absolute;
+    bottom: 53%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 18%;
+}
+
+.poke_data{
+    position: absolute;
+    font-weight: 600;
+    color: #bbb5b5;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%);
+    font-size: clamp(10px, 5vw, 25px);
+}
+
+.pokemon_name{
+    color: #3a444d;
+    text-transform: capitalize;
+    font-size: clamp(15px, 1.5vw, 25px);
+    cursor: pointer;
+}
+
+.form{
+    position: absolute;
+    width: 72%;
+    left: 46%;
+    top: 64%;
+    transform: translate(-50%);
+}
+
+.input_search{
+    width: 95%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(15px, 2.5vw, 25px);
+    box-shadow: -2px 3px 0 #888,-4px 6px 0 #2D1D1F;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.btn-prev, .btn-next{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1vw);
+    color: #fff;
+    background-color: #444;
+    box-shadow: -1px 2px 0 #222,-3px 5px 0 #000;
+    cursor: pointer;
+}
+
+.btn-prev:active, .btn-next:active{
+    box-shadow: inset -4px 4px 0 rgb(209, 9, 9);
+    font-size: 0.9rem;
+    background-color: #f00;
+}
+
+.bg{
+
+    z-index: 0;
+    position: absolute;
+    background-color: #36363694;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    animation-name: opacidade;
+    animation-duration: 1s;
+}
+
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }
+    100%{ 
+        opacity: 100;
+    }
+}
+
+.close{
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.close h3{
+    position: relative;
+    top: 15%;
+    font-size: 25px;
+}
+
+.close img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: -75%;
+    left: 46%;
+    cursor: pointer;
+    z-index: 25;
+}
+
+.modal{
+    position: absolute;
+    background-color: #ffffff;
+    width: 60vw;
+    height: 45vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    color: black;
+}
+
+.modal-pokemon{
+    position: absolute;
+    top: 50px;
+    left: 21rem;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+}
+.modal-pokemon img{
+    position: relative;
+    width: 120px;
+}
+
+.modal-pokemon span{
+    position: relative;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.pokemon_number_modal{
+    display: none;
+}
+
+.desc h1,h2{
+    position: relative;
+    top: 75vh;
+    left: -37%;
+}
+
+.abilitys{
+    position: absolute;
+    top: 0vh;
+    left: 46%;
+}
+.species{
+    position: absolute;
+    top: 0vh;
+    left: 85%;
+}
+
+.items{
+    position: absolute;
+    top: 18rem;
+    width: 100%;
+    left: 0;
+}
+
+.items h2{
+    position: relative;
+    top: 120%;
+    width: 100%;
+    left: 0;
+    letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 440px) and (max-height: 935px) and (min-width: 0px) and (min-height: 0px){
+    .modal{
+        position: absolute;
+        background-color: #ffffff;
+        width: 90vw;
+        height: 125vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 5px;
+        color: black;
+    }
+    .modal-pokemon img{
+        position: relative;
+        width: 120px;
+        left: -15.5rem;
+    }
+    .modal-pokemon span{
+        position: relative;
+        font-weight: 600;
+        font-size: 25px;
+        left: -15.5rem;
+    }
+    .desc h1,h2{
+        position: relative;
+        top: 75vh;
+        left: -37%;
+        font-size: 5px;
+    }
+    
+    .abilitys{
+        position: absolute;
+        top: -20vh;
+        left: 48%;
+        font-size: 35px;
+    }
+
+    .abilitys h1,h2{
+        font-size: 13px;
+    }
+
+    .species{
+        position: absolute;
+        top: -20vh;
+        left: 85%;
+        font-size: 35px;
+    }
+
+    .species h1,h2{
+        font-size: 13px;
+    }
+
+    .tipagens{
+        position: absolute;
+        top: -20vh;
+        left: 15%;
+        font-size: 35px;
+    }
+
+    .tipagens h1,h2{
+        font-size: 13px;
+    }
+    
+    .items{
+        position: absolute;
+        top: 18rem;
+        width: 100%;
+        left: 0;
+        font-size: 15px;
+    }
+    
+    .items h2{
+        position: relative;
+        top: 320%;
+        width: 100%;
+        left: 0;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 325px) and (max-height: 570px) and (min-width: 100px) and (min-height: 100px){
+    .desc h1,h2{
+        position: relative;
+        top: 75vh;
+        left: -37%;
+        font-size: 5px;
+    }
+    
+    .abilitys{
+        position: absolute;
+        top: -20vh;
+        left: 48%;
+        font-size: 35px;
+    }
+
+    .abilitys h1,h2{
+        font-size: 12px;
+    }
+
+    .species{
+        position: absolute;
+        top: -20vh;
+        left: 85%;
+        font-size: 35px;
+    }
+
+    .species h1,h2{
+        font-size: 12px;
+    }
+
+    .tipagens{
+        position: absolute;
+        top: -20vh;
+        left: 15%;
+        font-size: 35px;
+    }
+
+    .tipagens h1,h2{
+        font-size: 12px;
+    }
+
+    .items{
+        position: absolute;
+        top: 18rem;
+        width: 100%;
+        left: 0;
+        font-size: 13px;
+    }
+
+    .items h2{
+        position: relative;
+        top: 320%;
+        width: 100%;
+        left: 0;
+        letter-spacing: 1px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 885px) and (max-height: 1285px) and (min-width: 700px) and (min-height: 700px){
+    .pokedex{
+        height: 80vh;
+        width: 100%;
+    
+        max-width: 650px;
+    }
+    .poke_data{
+        position: absolute;
+        font-weight: 600;
+        color: #bbb5b5;
+        left: 50%;
+        top: 54%;
+        transform: translate(-50%);
+        font-size: 35px;
+    }
+    
+    .pokemon_name{
+        color: #3a444d;
+        text-transform: capitalize;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    
+    .form{
+        position: absolute;
+        width: 72%;
+        left: 46%;
+        top: 64%;
+        transform: translate(-50%);
+    }
+    .input_search::placeholder{
+        font-size: 35px;
+    }
+
+    .input_search{
+        width: 95%;
+        padding: 9%;
+        height: 7vh;
+        outline: none;
+        border: 2px solid #333;
+        border-radius: 5px;
+        font-weight: 600;
+        color: #3a444d;
+        font-size: clamp(15px, 2.5vw, 15vw);
+        box-shadow: -2px 3px 0 #888,-4px 6px 0 #2D1D1F;
+    }
+    
+    .buttons {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        width: 65%;
+        transform: translate(-57%, 0);
+        display: flex;
+        gap: 20px;
+    }
+    
+    .btn-prev, .btn-next{
+        width: 50%;
+        padding: 4%;
+        border: 2px solid #000;
+        border-radius: 5px;
+        font-size: clamp(8px, 5vw, 10vw);
+        color: #fff;
+        background-color: #444;
+        box-shadow: -1px 2px 0 #222,-3px 5px 0 #000;
+        cursor: pointer;
+    }
+
+    .bg{
+
+        z-index: 0;
+        position: absolute;
+        background-color: #36363694;
+        width: 100vw;
+        height: 100vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        animation-name: opacidade;
+        animation-duration: 1s;
+    }
+    
+    @keyframes opacidade {
+        0%{
+            opacity: 0;
+        }
+        100%{ 
+            opacity: 100;
+        }
+    }
+    
+    .close{
+        position: absolute;
+        height: 2rem;
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    .close h3{
+        position: relative;
+        top: 15%;
+        font-size: 25px;
+    }
+    
+    .close img{
+        position: relative;
+        width: 25px;
+        height: 25px;
+        top: -75%;
+        left: 46%;
+        cursor: pointer;
+        z-index: 25;
+    }
+    
+    .modal{
+        position: absolute;
+        background-color: #ffffff;
+        width: 90vw;
+        height: 75vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 5px;
+        color: black;
+    }
+    
+    .modal-pokemon{
+        position: absolute;
+        top: 50px;
+        left: 21rem;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+    }
+    .modal-pokemon img{
+        position: relative;
+        left: -4rem;
+        width: 120px;
+    }
+    
+    .modal-pokemon span{
+        position: relative;
+        font-weight: 600;
+        font-size: 35px;
+        left: -4rem;
+    }
+    
+    .desc h1,h2{
+        position: relative;
+        top: 40vh;
+        left: -37%;
+    }
+    
+    .abilitys{
+        position: absolute;
+        top: 0vh;
+        left: 46%;
+    }
+    .species{
+        position: absolute;
+        top: 0vh;
+        left: 85%;
+    }
+    
+    .items{
+        position: absolute;
+        top: 18rem;
+        width: 100%;
+        left: 0;
+    }
+    
+    .items h2{
+        position: relative;
+        top: 120%;
+        width: 100%;
+        left: 0;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 1285px) and (max-height: 885px) and (min-width: 700px) and (min-height: 700px){
+    .desc h1,h2{
+        position: relative;
+        top: 53.2vh;
+        left: -37%;
+    }
+}

@@ -1,0 +1,130 @@
+      /* estilo geral dos cartões */
+      .animal-card {
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 25px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        overflow: hidden;
+        width: 300px;
+          }
+          
+          /* estilo da imagem do animal */
+    .animal-card img {
+        display: block;
+        position: relative;
+        left: -5px;
+        width: 105%;
+        height: 210px;
+        max-height: 250px;
+        }
+          
+          /* estilo do nome do animal */
+    .animal-card h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+        user-select: none;
+        cursor: pointer;
+        }
+          
+          /* estilo da descrição do animal */
+    .animal-card p {
+        font-size: 1.2rem;
+        margin: 10px;
+        user-select: none;
+        }
+    
+    .animal-card1 {
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 25px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        overflow: hidden;
+        left: 20rem;
+        width: 300px;
+          }
+          
+    
+    .animal-card:hover, .animal-card1:hover, .animal-card2:hover{
+        box-shadow: 0 1px 5px 2px #f8f408;
+        transition: 2s;
+        cursor: pointer;
+    }
+    
+          /* estilo da imagem do animal */
+    .animal-card1 img {
+        display: block;
+        position: relative;
+        left: -25px;
+        width: 120%;
+        height: 260px;
+        max-height: 290px;
+        }
+          
+          /* estilo do nome do animal */
+    .animal-card1 h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+        user-select: none;
+        cursor: pointer;
+        }
+          
+          /* estilo da descrição do animal */
+    .animal-card1 p {
+        font-size: 1.2rem;
+        margin: 10px;
+        user-select: none;
+        }
+    
+    .animal-card2 {
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 25px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        overflow: hidden;
+        left: 40rem;
+        width: 300px;
+          }
+          
+          /* estilo da imagem do animal */
+    .animal-card2 img {
+        display: block;
+        position: relative;
+        left: 45px;
+        width: 70%;
+        height: auto;
+        max-height: 181px;
+        }
+          
+          /* estilo do nome do animal */
+    .animal-card2 h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+        user-select: none;
+        cursor: pointer;
+        }
+          
+          /* estilo da descrição do animal */
+    .animal-card2 p {
+        font-size: 1.2rem;
+        margin: 10px;
+        user-select: none;
+        }
+    
